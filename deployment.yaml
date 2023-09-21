@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: 495253170921.dkr.ecr.ap-south-1.amazonaws.com/testing:latest
+          image: 495253170921.dkr.ecr.ap-south-1.amazonaws.com/testing:latest # Update the image tag to the latest version
           ports:
             - containerPort: 80
           resources:
@@ -24,3 +24,4 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
+          imagePullPolicy: Always # Set the imagePullPolicy to Always
