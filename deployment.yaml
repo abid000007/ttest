@@ -15,7 +15,7 @@ spec:
       hostNetwork: true  # Set the hostNetwork to true to use host network
       containers:
         - name: my-app
-          image: 495253170921.dkr.ecr.ca-central-1.amazonaws.com/nifti2:
+          image: 495253170921.dkr.ecr.ca-central-1.amazonaws.com/nifti2
           tag: lattest
           ports:
             - containerPort: 80
