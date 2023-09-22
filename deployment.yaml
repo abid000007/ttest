@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nifty-deployment
 spec:
-  replicas: 1
+  replicas: 2  # Use at least 2 replicas for high availability
   selector:
     matchLabels:
       app: my-app
@@ -26,3 +26,17 @@ spec:
               memory: "128Mi"
               cpu: "500m"
           imagePullPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-app-service
+spec:
+  selector:
+    app: my-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer  # Use a LoadBalancer type service for external access
