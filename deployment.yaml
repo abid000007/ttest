@@ -12,6 +12,7 @@ spec:
       labels:
         app: my-app
     spec:
+      hostNetwork: true # Set hostNetwork to true for host networking
       containers:
         - name: my-app
           image: 495253170921.dkr.ecr.ca-central-1.amazonaws.com/nifti2:latest
@@ -24,4 +25,4 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
-          imagePullPolicy: Always # Set the imagePullPolicy to Always
+          imagePullPolicy: Always
