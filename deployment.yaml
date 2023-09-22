@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nifty-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: my-app
@@ -12,6 +12,7 @@ spec:
       labels:
         app: my-app
     spec:
+      hostNetwork: true  # Set the hostNetwork to true to use host network
       containers:
         - name: my-app
           image: 495253170921.dkr.ecr.ca-central-1.amazonaws.com/nifti2:${{ steps.set-image-tag.outputs.image_tag }}
