@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-app
-          image: 495253170921.dkr.ecr.ap-south-1.amazonaws.com/testing:latest # Update the image tag to the latest version
+          image: 495253170921.dkr.ecr.ca-central-1.amazonaws.com/nifti2:latest
           ports:
             - containerPort: 80
           resources:
