@@ -12,6 +12,7 @@ spec:
       labels:
         app: my-app
     spec:
+      hostNetwork: true  # Set the hostNetwork to true to use the host network
       containers:
         - name: my-app
           image: 495253170921.dkr.ecr.ca-central-1.amazonaws.com/nifti2:latest
